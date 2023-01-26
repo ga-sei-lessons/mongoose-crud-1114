@@ -24,6 +24,12 @@ const BlogSchema = new mongoose.Schema({
     // embed the child schema in the parent schema
     comments: [CommentSchema],
     // eventually we will add a field of the user id who made this blog
+    blogger: {
+        // tell mongoose that this is a refernce
+        type: mongoose.Schema.Types.ObjectId,
+        // tell mongoose what is being referenced
+        ref: 'User'
+    }
 }, {
     timestamps: true
 })
