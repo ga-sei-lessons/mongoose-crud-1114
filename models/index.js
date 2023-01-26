@@ -17,5 +17,6 @@ db.on('error', err => console.log('🔥 the datacenter has burned to the ground:
 
 // export all of our models
 module.exports = {
-    Drink: require('./Drink')
+    Drink: require('./Drink'),
+    Blog: require('./Blog')
 }
